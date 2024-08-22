@@ -1,0 +1,9 @@
+{% extends "base/diary_base.html" %}
+{% block body %}
+<h1>My diary</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">등록</button>
+</form>
+{% endblock %}
